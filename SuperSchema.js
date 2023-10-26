@@ -1,11 +1,11 @@
 {
 "User": {
-  "id": ID! // "U123"
-  firstName: String // "Cam"
-  lastName: String // "Alot"
-  name: String // "Cam Alot"
-  userName: String // "camalot"
-  alternateIdentities: [Flash] // can login as a different user (character or organization) custom identities - special user-types
+  "id": ID! // "U123",
+  "firstName": String // "Cam",
+  "lastName:: String // "Alot",
+  "name": String // "Cam Alot",
+  "userName": String // "camalot",
+  alternateIdentities: [Flash] // c,an login as a different user (character or organization) custom identities - special user-types
   email: String // "camalot999@gmail.com"
   phone: String // "123-456-7890"
   address: String // "123 Main St."
@@ -22,7 +22,7 @@
   refferedBy: User // "Cam Alot"
   profilePicture: String // "https://www.google.com"
   bio: String // "I'm a cool guy"
-  organizations: [Organization] // "hackhouse" "Organizations that the user is a part of"  /camalot/hackhouse/roles - displays camalots' roles in hackhouse. camalot/hackhouse/ceo displays camalot's hackhouse ceo role object
+  organizations: [Organization] // "hackhouse" "Organizations that the user is a part of"  /user.camalot/org.hackhouse/roles - displays camalots' roles in hackhouse. camalot/hackhouse/ceo displays camalot's hackhouse ceo role object
   groups: [Group] // "Groups that the user is a part of" /camalot/boulder_producers_guild/tasks - displays camalots' tasks in boulder_producers_guild. camalot/boulder_producers_guild/set_up_chairs displays camalot's boulder_producers_guild set_up_chairs task object
     // ex. event production department, media department, software development department, etc
   events: [Event] // "Events that the user is interested in, going to, or has gone to" /camalot/events - displays camalots' events. camalot/events/going displays camalots' events that he is going to. camalot/events/interested displays camalots' events that he is interested in. camalot/events/not_going displays camalots' events that he is not going to. camalot/events/viewed displays camalots' events that he has viewed. camalot/events/created displays camalots' events that he has created.
