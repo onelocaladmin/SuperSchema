@@ -13,31 +13,30 @@
     "name": "Barry Allen",
     "moniker": "Scarlet Speedster",
     "userName": "CrimsonKing",
-    "alternateIdentities": [Agent],
+    "alternateIdentities": [Agent]
     "catchphrase": "run fast", // String
     "email": "flash52@gmail.com",
     }
-    ],
-  "email": "camalot999@gmail.com",
-  "phone": "123-456-7890",
-  "address": "123 Main St.",
-  "city": "Boulder",
-  "state": "Co",
-  "country": "USA",
-  "province": "null",
-  "region": "West",
-  "continent": "North America",
-  "planet": "Earth",
-  "lv1_ecoregion:": "Great Plains",
-  "lv2_ecoregion": "South Central Semi-arid Praries",
-  "lv3_ecoregion": "High Plains",
-  "lv4_ecoregion":"Front Range Fans",
-  "zip": "94105",
-  "location" "Cam's House, 123 Main St., Boulder, C0 80301", // users' current location /User/CamAlot/Location // populates as map view with pin. writes venue name and address
-    "name": "Cam's House",
-    "venue": "Cam's House",
-    "latitude": "37.783692",
-    "longitude": "-122.409972",
+  "email": "camalot999@gmail.com"
+  "phone": "123-456-7890"
+  "address": "123 Main St."
+  "city": "Boulder"
+  "state": "Co"
+  "country": "USA"
+  "province": 
+  "region": "West"
+  "continent": "North America"
+  "planet": "Earth"
+  "lv1_ecoregion:": "Great Plains"
+  "lv2_ecoregion": "South Central Semi-arid Praries"
+  "lv3_ecoregion": "High Plains"
+  "lv4_ecoregion":"Front Range Fans"
+  "zip": "94105"
+  "location" "Cam's House, 123 Main St., Boulder, C0 80301" // users' current location /User/CamAlot/Location // populates as map view with pin. writes venue name and address
+    "name": "Cam's House"
+    "venue": "Cam's House"
+    "latitude": "37.783692"
+    "longitude": "-122.409972"
   "password": "password" - never stored in plain text on the server or client side - only the hash is stored on the server side and the hash is never sent to the client side - the client side sends the password to the server side and the server side hashes the password and compares it to the hash stored on the server side - if the hashes match, the user is authenticated and the user is logged in - if the hashes do not match, the user is not authenticated and the user is not logged in - the client side never knows the password or the hash of the password - the client side only knows that the user is authenticated and logged in or not authenticated and not logged in
   "refferedBy": [
     {
@@ -45,82 +44,33 @@
       "name": "Cam Alot"
     }
 
-  "profilePicture": "https://www.google.com"
-  "backgroundPicture": "https://www.google.com"
-  "description": String // "I'm a cool guy"
-  "organizations": [Organization] // "hackhouse" "Organizations that the user is a part of"  /user.camalot/org.hackhouse/roles - displays camalots' roles in hackhouse. camalot/hackhouse/ceo displays camalot's hackhouse ceo role object
-  "groups": [ // "Groups that the user is a part of" /camalot/boulder_producers_guild/tasks - displays camalots' tasks in boulder_producers_guild. camalot/boulder_producers_guild/set_up_chairs displays camalot's boulder_producers_guild set_up_chairs task object
+  profilePicture: String // "https://www.google.com"
+  backgroundPicture: String // "https://www.google.com"
+  description: String // "I'm a cool guy"
+  organizations: [Organization] // "hackhouse" "Organizations that the user is a part of"  /user.camalot/org.hackhouse/roles - displays camalots' roles in hackhouse. camalot/hackhouse/ceo displays camalot's hackhouse ceo role object
+  groups: [Group] // "Groups that the user is a part of" /camalot/boulder_producers_guild/tasks - displays camalots' tasks in boulder_producers_guild. camalot/boulder_producers_guild/set_up_chairs displays camalot's boulder_producers_guild set_up_chairs task object
     // ex. event production department, media department, software development department, etc
-    "id": "G123",
-    "name": "Boulder Producers Guild",
-    "description": "Boulder Producers Guild",
-    "members": [User] // "Users that are part of the group"
-    "roles": [Role] // "Roles that the user has in the group"
-      "id": "R123",
-      "name": "CEO",
-      "description": "CEO", 
-      "responsibilities": "CEO",
-      "tasks": [Task] // "Tasks that the user is responsible for in the role"
-        "id": "T123", 
-        "name": "Set up chairs",
-        "summary": "Set up chairs",
-        "description": "Set up chairs",
-        "when": "2018-01-01T00:00:00Z - 2018-01-01T00:00:00Z",
-        "workPeriods": [
-          {} // "work periods that the user is working on the task"
-        "dueDate": "2018-01-01T00:00:00Z",
-        "priority": "high",
-        "status": "active",
-        "assignedTo": [User] // "user that the task is assigned to"
-        "assignedBy": [User] // "user that assigned the task"
-        "attachments": [String] // "attachments of the task"
-        "followers": [User] // "users that are following the task"
-        "comments": [Comment] // "comments that are on the task"
-        "subtasks": [Task] // "subtasks that are part of the task"
-        "bountyType": [cash, crypto, inGameToken, giftPoints, resource] // "type of bounty"
-          "cash":
-            "usd":
-          "crypto":
-          "inGameToken":
-          "giftPoints":
-          "resource":
-        "bountyAmount": // "amount of bounty"
-        "location": [Location] // "location of the task"
-        "schedule": [Schedule] // "schedule of the task"
-        "stakeholders": [User] // "users that are stakeholders of the task"
-          "investors": [User] // "users that are investors of the task"
-          "customers": [User] // "users that are customers of the task"
-          "employees": [User] // "users that are employees of the task"
-          "managers": [User] // "users that are managers of the task"
-        "resources": [Resource] // "resources that are needed for the task"
-        "permissions": [Permission] // "permissions that the user has for the task"
-          "can edit": // "true"
-          "can view": // "true"
-          "can take":
-
-      "badges": [Badge] // "Badges that the user needs for the role"
-
-    "events": [Event] // "Events that the user is interested in, going to, or has gone to" /camalot/events - displays camalots' events. camalot/events/going displays camalots' events that he is going to. camalot/events/interested displays camalots' events that he is interested in. camalot/events/not_going displays camalots' events that he is not going to. camalot/events/viewed displays camalots' events that he has viewed. camalot/events/created displays camalots' events that he has created.
-    "groups": [Group] // "Groups that the user is a part of at the event" 
+  events: [Event] // "Events that the user is interested in, going to, or has gone to" /camalot/events - displays camalots' events. camalot/events/going displays camalots' events that he is going to. camalot/events/interested displays camalots' events that he is interested in. camalot/events/not_going displays camalots' events that he is not going to. camalot/events/viewed displays camalots' events that he has viewed. camalot/events/created displays camalots' events that he has created.
+    groups: [Group] // "Groups that the user is a part of at the event" 
         // attendees, performers, producers, hosts, volunteers, sponsors, vendors, staff, security, guests, etc
-      "roles": [Role] // "Roles that the user has at the event"
+      roles: [Role] // "Roles that the user has at the event"
           // attendee, performer, producer, host, volunteer, sponsor, vendor, staff, security, guest, etc
-        "tasks": [Task] // "Tasks that the user has at the event"
+        tasks: [Task] // "Tasks that the user has at the event"
           // attend, perform, check in, set up, tear down, clean up, etc
-    "producing": [User] // "events that the user is producing"
-    'maybeGoing": [Event] // "Events that the user is maybe going to"
-    "went": [Event] // "Events that the user has gone to"
-    "at": [Event] // "Events that the user is at"
-    "going": [Event] // "Events that the user is going to" /camalot/events/going
-    "interested": [Event] // "Events that the user is interested in"
-    "notGoing": [Event] // "Events that the user is not going to"
-    "viewed": [Event] // "Events that the user has viewed"
-    "created": [Event] // "Events that the user has created"
-        "eventId": // "E123"
-        "name": // "name of the event"
-        "description": // "description of the event"
-    "hosting": [Event] // "Events that the user is hosting"
-  "skills": [Skill] // "Skills that the user has"
+    producing: [User] // "events that the user is producing"
+    maybeGoing: [Event] // "Events that the user is maybe going to"
+    went: [Event] // "Events that the user has gone to"
+    at: [Event] // "Events that the user is at"
+    going: [Event] // "Events that the user is going to" /camalot/events/going
+    interested: [Event] // "Events that the user is interested in"
+    notGoing: [Event] // "Events that the user is not going to"
+    viewed: [Event] // "Events that the user has viewed"
+    created: [Event] // "Events that the user has created"
+        eventId: // "E123"
+        name: // "name of the event"
+        description: // "description of the event"
+    hosting: [Event] // "Events that the user is hosting"
+  skills: [Skill] // "Skills that the user has"
     type: [programming, design, etc] // "type of skill"
   attributes: [Attribute] // "Attributes that the user has"
     physical traits: [height, weight, hair color, eye color, etc] // "Physical traits that the user has"
