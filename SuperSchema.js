@@ -49,7 +49,7 @@
   "backgroundPicture": "https://www.google.com"
   "description": String // "I'm a cool guy"
   "organizations": [Organization] // "hackhouse" "Organizations that the user is a part of"  /user.camalot/org.hackhouse/roles - displays camalots' roles in hackhouse. camalot/hackhouse/ceo displays camalot's hackhouse ceo role object
-  "groups": [ // "Groups that the user is a part of" /camalot/boulder_producers_guild/tasks - displays camalots' tasks in boulder_producers_guild. camalot/boulder_producers_guild/set_up_chairs displays camalot's boulder_producers_guild set_up_chairs task object
+  "groups": [ // "Groups that the user is a part of" /camalot/boulder_producers_guild/tasks - displays camalots' tasks in boulder_producers_guild. camalot/boulder_producers_guild/task/set_up_chairs displays camalot's boulder_producers_guild set_up_chairs task object
     // ex. event production department, media department, software development department, etc
     "id": "G123",
     "name": "Boulder Producers Guild",
