@@ -44,69 +44,15 @@
       "id": "U123",
       "name": "Cam Alot"
     }
-
   "profilePicture": "https://www.google.com"
   "backgroundPicture": "https://www.google.com"
   "description": String // "I'm a cool guy"
   "organizations": [Organization] // "hackhouse" "Organizations that the user is a part of"  /user.camalot/org.hackhouse/roles - displays camalots' roles in hackhouse. camalot/hackhouse/ceo displays camalot's hackhouse ceo role object
   "groups": [ // "Groups that the user is a part of" /camalot/boulder_producers_guild/tasks - displays camalots' tasks in boulder_producers_guild. camalot/boulder_producers_guild/task/set_up_chairs displays camalot's boulder_producers_guild set_up_chairs task object
-    // ex. event production department, media department, software development department, etc
-    "id": "G123",
-    "name": "Boulder Producers Guild",
-    "description": "Boulder Producers Guild",
-    "members": [User] // "Users that are part of the group"
-    "roles": [Role] // "Roles that the user has in the group"
-      "id": "R123",
-      "name": "CEO",
-      "description": "CEO", 
-      "responsibilities": "CEO",
-      "tasks": [Task] // "Tasks that the user is responsible for in the role"
-        "id": "T123", 
-        "name": "Set up chairs",
-        "summary": "Set up chairs",
-        "description": "Set up chairs",
-        "when": "2018-01-01T00:00:00Z - 2018-01-01T00:00:00Z",
-        "workPeriods": [
-          {} // "work periods that the user is working on the task"
-        "dueDate": "2018-01-01T00:00:00Z",
-        "priority": "high",
-        "status": "active",
-        "assignedTo": [User] // "user that the task is assigned to"
-        "assignedBy": [User] // "user that assigned the task"
-        "attachments": [String] // "attachments of the task"
-        "followers": [User] // "users that are following the task"
-        "comments": [Comment] // "comments that are on the task"
-        "subtasks": [Task] // "subtasks that are part of the task"
-        "bountyType": [cash, crypto, inGameToken, giftPoints, resource] // "type of bounty"
-          "cash":
-            "usd":
-          "crypto":
-          "inGameToken":
-          "giftPoints":
-          "resource":
-        "bountyAmount": // "amount of bounty"
-        "location": [Location] // "location of the task"
-        "schedule": [Schedule] // "schedule of the task"
-        "stakeholders": [User] // "users that are stakeholders of the task"
-          "investors": [User] // "users that are investors of the task"
-          "customers": [User] // "users that are customers of the task"
-          "employees": [User] // "users that are employees of the task"
-          "managers": [User] // "users that are managers of the task"
-        "resources": [Resource] // "resources that are needed for the task"
-        "permissions": [Permission] // "permissions that the user has for the task"
-          "can edit": // "true"
-          "can view": // "true"
-          "can take":
-
-      "badges": [Badge] // "Badges that the user needs for the role"
-
-    "events": [Event] // "Events that the user is interested in, going to, or has gone to" /camalot/events - displays camalots' events. camalot/events/going displays camalots' events that he is going to. camalot/events/interested displays camalots' events that he is interested in. camalot/events/not_going displays camalots' events that he is not going to. camalot/events/viewed displays camalots' events that he has viewed. camalot/events/created displays camalots' events that he has created.
+  "events": [Event] // "Events that the user is interested in, going to, or has gone to" /camalot/events - displays camalots' events. camalot/events/going displays camalots' events that he is going to. camalot/events/interested displays camalots' events that he is interested in. camalot/events/not_going displays camalots' events that he is not going to. camalot/events/viewed displays camalots' events that he has viewed. camalot/events/created displays camalots' events that he has created.
     "groups": [Group] // "Groups that the user is a part of at the event" 
-        // attendees, performers, producers, hosts, volunteers, sponsors, vendors, staff, security, guests, etc
-      "roles": [Role] // "Roles that the user has at the event"
-          // attendee, performer, producer, host, volunteer, sponsor, vendor, staff, security, guest, etc
-        "tasks": [Task] // "Tasks that the user has at the event"
-          // attend, perform, check in, set up, tear down, clean up, etc
+    "roles": [Role] // "Roles that the user has at the event" // attendee, performer, producer, host, volunteer, sponsor, vendor, staff, security, guest, etc
+    "tasks": [Task] // "Tasks that the user has at the event" // attend, perform, check in, set up, tear down, clean up, etc
     "producing": [User] // "events that the user is producing"
     'maybeGoing": [Event] // "Events that the user is maybe going to"
     "went": [Event] // "Events that the user has gone to"
@@ -244,38 +190,36 @@ organizations: [Organization] // "Organizations in the network"  organization/ha
       longitude: // "longitude of the building"
     products: [Product] // "Products that the user is selling"
     services: [Service] // "Services that the user is offering"
-    groups: [Group] // "Groups that the user is a part of"
-      roles: [Role] // "Roles that the user has in the group"
-        responsibilities: [Task] // "Tasks that the user is responsible for in the role"
-        tasks: [Task] // "Tasks that the user is working on in the role"
+    groups: [Group] // "Groups in the org"
+      roles: [Role] // "roles in the group"
+        responsibilities: //responsibilities for the role
+        tasks: [Task] // "Tasks for the role"
           name: // "name of the task"
           summary: // "summary of the task"
-          description: // "description of the task"
+          description: // "full description of the task"
+          status: // pending, in progress, done, stuck (what's in the way?)
           dueDate: // "due date of the task"
-          priority: [low, medium, high] // "priority of the task"
-          status: [active, inactive, completed] // "status of the task"
+          priority: [high, mid, low] // "priority of the task"
           assignedTo: [User] // "user that the task is assigned to"
           assignedBy: [User] // "user that assigned the task"
-          attachments: [String] // "attachments of the task"
+          attachments: [String] // "attachments of the task (pics, docs)"
           followers: [User] // "users that are following the task"
           comments: [Comment] // "comments that are on the task"
           subtasks: [Task] // "subtasks that are part of the task"
-          bountyType: [cash, crypto, inGameToken, giftPoints, resource] // "type of bounty"
-            cash:
-              usd:
-            crypto:
-            inGameToken:
-            giftPoints:
-            resource:
-          bountyAmount: // "amount of bounty"
-          
+          gratis: //gratis given on the task
+          bounty: [cash, crypto, inGameToken, giftPoints, resource] // "type of bounty"
+            fromUser:
+            type:
+              cash:
+                type: usd
+                qty: 100
+              crypto:
+                type:
+                qty:
+                inGameToken:
+                resource:
           location: [Location] // "location of the task"
-          schedule: [Schedule] // "schedule of the task"
-          stakeholders: [User] // "users that are stakeholders of the task"
-            investors: [User] // "users that are investors of the task"
-            customers: [User] // "users that are customers of the task"
-            employees: [User] // "users that are employees of the task"
-            managers: [User] // "users that are managers of the task"
+          schedule: [Schedule] // "when task will be underway"
             
           resources: [Resource] // "resources that are needed for the task"
           permissions: [Permission] // "permissions that the user has for the task"
@@ -320,132 +264,49 @@ organizations: [Organization] // "Organizations in the network"  organization/ha
             priority: [low, medium, high] // "Priority of the task"
 }
 
+
+
+
+
 tasks: [Task] // "Tasks that the role is working on"
-  name: // "name of the task"
-  AsignedTo: [User] // "user that the task is assigned to" (trusted delegate)
-  Role: [Role] // "role that the task is assigned to" (responsible party)
-  status: [active, inactive, completed] // "Status of the task"
-  priority: [low, medium, high] // "Priority of the task"
-    id: ID!
-  supervisor: [role] // "role that supervises the task"
-  createdAt: String
-  createdBy: User
-  admins: [User]
-  requirements: Requirements
-  title: String
-  description: String
-  dueDate: String
-  priority: String
-  status: String
-  assignedTo: User
-  updatedAt: String
-  attachments: [String]
-  followers: [User]
-  comments: [Comment]
-    reply: Comment
-  subtasks: [Task]
-  bountyType: String
-      cash:
-        usd:
-      crypto:
-      inGameToken:
-      giftPoints:
-      resource:
-  bountyAmount: Float
-  location: Location
-  schedule: Schedule
-  stakeholders: [User]
+  "id": "T123", 
+  "name": "Set up chairs",
+  "summary": "Set up chairs",
+  "description": "Set up chairs",
+  "parents": [role, project, org]
+  "siblings": [task]
+  "when": "2018-01-01T00:00:00Z - 2018-01-01T00:00:00Z",
+  "workPeriods": [
+    {} // "work periods that the user is working on the task"
+  "dueDate": "2018-01-01T00:00:00Z",
+  "priority": "high",
+  "status": "active",
+  "assignedTo": [User] // "user that the task is assigned to"
+  "assignedBy": [User] // "user that assigned the task"
+  "attachments": [String] // "attachments of the task"
+  "followers": [User] // "users that are following the task"
+  "comments": [Comment] // "comments that are on the task"
+    "replies": //reply to the comment
+  "subtasks": [Task] // "subtasks that are part of the task"
+  "bountyType": [cash, crypto, inGameToken, giftPoints, resource] // "type of bounty"
+    "cash":
+      "usd":
+    "crypto":
+    "inGameToken":
+    "giftPoints":
+    "resource":
+  "bountyAmount": // "amount of bounty"
+  "location": [Location] // "location of the task"
+  "schedule": [Schedule] // "schedule of the task"
+  "stakeholders": [User] // "users that are stakeholders of the task"
+  "resources": [Resource] // "resources that are needed for the task"
+  "permissions": [Permission] // "permissions that the user has for the task"
+    "can edit": // "true"
+    "can view": // "true"
+    "can take":
   resources: [Resource]
-  permissions: [Permission]
-    can edit:
-    can view:
-    canTake:
-      user:
-      org:
-      group:
-      badge:
-      minTokenQuantity:
-badges: [Badge] // "Badges that the user needs for the task"
-  permissions: [Permission] // "Permissions that the user has"
-    can edit: // "true"
-    can view: // "true"
-    canTake: 
-      tasks: [Task] // "Tasks that the user can take"
-      roles: [Role] // "Roles that the user can take"
-}
 
-intentMatch: [IntentMatch] // "Intent matches that trigger draft agreement with commitments. when users accept, the agreement is 
-//created, the commitments are executed and the resources are transfered. offers are automatically agreed to by the offerer."
-  type: offer, request
-  resource: Resource
-    spec.
-  description: String
-  giverCommitment
-    offeredAs: gift, loan, rent, sale, trade
-  recieverCommitment
-    requestedAs: gift, loan, rent, sale, trade
-  user: User
-  createdAt: String
-  updatedAt: String
 
-agreement
-  id: ID!
-  intentMatch: IntentMatch
-  giverCommitment
-    offeredAs: gift, loan, rent, sale, trade
-  recieverCommitment
-    requestedAs: gift, loan, rent, sale, trade
-  user: User
-  createdAt: String
-  updatedAt: String
-
-commitment
-
-economicEvent: // "economic events that are triggered by agreements- bob transfered car to alice"
-  id: ID!
-  agreement: Agreement
-  giverCommitment
-    offeredAs: gift, loan, rent, sale, trade
-  recieverCommitment
-    requestedAs: gift, loan, rent, sale, trade
-  user: User
-  createdAt: String
-  updatedAt: String
-
-Condition {
-  id: ID!
-  name: String
-  AppliedToObjectId: ID!
-  description: String
-  users: [User]
-  canView: [User]
-  canEdit: [User]
-  canTake: [User]
-  canApply: [User]
-  canRent: [User, group, badgeHolder, roleHolder, ]
-  createdAt: String
-  updatedAt: String
-}
-
-Action: // "actions that can be taken on objects"
-  dropoff
-  pickup
-  consume
-  use
-  work
-  cite
-  produce
-  accept
-  modify
-  pass
-  fail
-  deliver-service
-  transfer-all-rights
-  transfer-custody
-  transfer
-  move
-  raise
-  lower
 
 Event {
   id: ID! // "E123"
@@ -505,7 +366,7 @@ Event {
         "latitude":23.7732067
 
 
-permissions: [Permission] // "permissions attached to the object that determine who can do what with the object"
+objectPermissions: [Permission] // "permissions attached to the object that determine who can do what with the object"
   id: ID!
   permittedObject_id: // "ID of the object"
   canEdit: // "true"
@@ -527,9 +388,40 @@ permissions: [Permission] // "permissions attached to the object that determine 
   cannotComment: // "true"
   }
 
-  if canView 
-  + this.viewtemplate
-
+  
+ActionPermissions:
+  canQueryAnonymous
+  canQueryIdentified
+  canView
+  canTake
+  canRent
+  canBorrow
+  canBuy
+  canSell
+    user:
+    org:
+    group:
+    badge:
+    role:
+    minTokenQuantity:
+    dropoff
+  pickup
+  consume
+  use
+  work
+  cite
+  produce
+  accept
+  modify
+  pass
+  fail
+  deliver-service
+  transfer-all-rights
+  transfer-custody
+  transfer
+  move
+  raise
+  lower
 
 
 Skill {
@@ -706,3 +598,55 @@ InGameToken {
   createdAt: String
   updatedAt: String
 }
+
+  
+
+      
+badges: [Badge] // "Badges that the user needs for the task"
+  permissions: [Permission] // "Permissions that the user has"
+    can edit: // "true"
+    can view: // "true"
+    canTake: 
+      tasks: [Task] // "Tasks that the user can take"
+      roles: [Role] // "Roles that the user can take"
+}
+
+intentMatch: [IntentMatch] // "Intent matches that trigger draft agreement with commitments. when users accept, the agreement is 
+//created, the commitments are executed and the resources are transfered. offers are automatically agreed to by the offerer."
+  type: offer, request
+  resource: Resource
+    spec.
+  description: String
+  giverCommitment
+    offeredAs: gift, loan, rent, sale, trade
+  recieverCommitment
+    requestedAs: gift, loan, rent, sale, trade
+  user: User
+  createdAt: String
+  updatedAt: String
+
+agreement
+  id: ID!
+  intentMatch: IntentMatch
+  giverCommitment
+    offeredAs: gift, loan, rent, sale, trade
+  recieverCommitment
+    requestedAs: gift, loan, rent, sale, trade
+  user: User
+  createdAt: String
+  updatedAt: String
+
+commitment
+
+economicEvent: // "economic events that are triggered by agreements- bob transfered car to alice"
+  id: ID!
+  agreement: Agreement
+  giverCommitment
+    offeredAs: gift, loan, rent, sale, trade
+  recieverCommitment
+    requestedAs: gift, loan, rent, sale, trade
+  user: User
+  createdAt: String
+  updatedAt: String
+
+
